@@ -22,8 +22,8 @@ fun loadFromYaml(path: Path): Map<*, *> {
     }
 }
 
-fun loadFromProperties(path: Path): Map<*, *> {
-    val mapper = ObjectMapper(JavaPropsFactory())
+fun loadFromJson(path: Path): Map<*, *> {
+    val mapper = ObjectMapper(JsonFactory())
     mapper.registerModule(KotlinModule())
 
     return Files.newBufferedReader(path).use {
@@ -31,8 +31,8 @@ fun loadFromProperties(path: Path): Map<*, *> {
     }
 }
 
-fun loadFromJson(path: Path): Map<*, *> {
-    val mapper = ObjectMapper(JsonFactory())
+fun loadFromProperties(path: Path): Map<*, *> {
+    val mapper = ObjectMapper(JavaPropsFactory())
     mapper.registerModule(KotlinModule())
 
     return Files.newBufferedReader(path).use {

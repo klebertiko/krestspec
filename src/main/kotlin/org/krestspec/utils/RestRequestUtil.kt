@@ -12,7 +12,7 @@ import java.nio.file.Paths
 import kotlin.properties.Delegates
 
 /**
- * Created by kleber on 18/05/17.
+ * Created by kleber on 07/07/17.
  */
 object RestRequestUtil : RestAssured() {
 

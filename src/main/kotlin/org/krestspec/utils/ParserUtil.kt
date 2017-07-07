@@ -23,11 +23,6 @@ fun <T> fromJsonFile(jsonFilePath: String, valueType: Class<T>): T {
     return ObjectMapper().readValue(Paths.get(jsonFilePath).toFile(), valueType)
 }
 
-
-fun <T> T.fromJsonFile(jsonFilePath: String, valueType: Class<T>): T {
-    return ObjectMapper().readValue(Paths.get(jsonFilePath).toFile(), valueType)
-}
-
 fun <T> T.toGsonString(valueType: Class<T>): String {
     return Gson().toJson(this, valueType)
 }
@@ -37,9 +32,5 @@ fun <T> String.toGsonObject(valueType: Class<T>): T {
 }
 
 fun <T> fromGsonFile(jsonFilePath: String, valueType: Class<T>): T {
-    return Gson().fromJson(InputStreamReader(FileInputStream(jsonFilePath), "UTF8"), valueType)
-}
-
-fun <T> T.fromGsonFile(jsonFilePath: String, valueType: Class<T>): T {
     return Gson().fromJson(InputStreamReader(FileInputStream(jsonFilePath), "UTF8"), valueType)
 }
