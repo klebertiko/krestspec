@@ -1,2 +1,2 @@
 # krestspec
-Kotlin Rest Specification Test
+Kotlin Rest Specification
